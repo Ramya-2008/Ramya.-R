@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>UI/UX Portfolio - BCA Student</title>
+  <style>
+    /* Adding minimal inline styling to make it advanced and presentable */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      line-height: 1.6;
+      background: linear-gradient(180deg, #ffc0cb 0%, #800080 100%);
+      color: #333;
+    }
+    header {
+      background-color: #282c34;
+      color: #fff;
+      padding: 1.5rem 2rem;
+      text-align: center;
+    }
+    section {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: linear-gradient(180deg, #a0d8ef 0%, #b3e5b0 100%);
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+    h1, h2, h3 {
+      color: #282c34;
+    }
+    ul, ol {
+      margin-left: 1.2rem;
+      list-style:none;
+      padding-left: 1rem;
+    }
+    ul.tree, ul.tree ul {
+      list-style: none;
+      padding-left: 1rem;
+      position: relative;
+    }
+    ul.tree ul {
+      margin-left: 1rem;
+      border-left: 1px solid #555;
+    }
+    ul.tree li {
+      margin: 0.5rem 0;
+      position: relative;
+      padding-left: 1rem;
+      cursor: pointer;
+    }
+    ul.tree li::before {
+      content: "";
+      position: absolute;
+      top: 1rem;
+      left: 0;
+      width: 0.75rem;
+      height: 0.75rem;
+      border: 1px solid #555;
+      border-radius: 2px;
+      background-color: #61dafb;
+    }
+    ul.tree li.collapsible::before {
+      content: "\25B6"; /* right-pointing triangle */
+      position: absolute;
+      left: 0;
+      top: 0.7rem;
+      width: 0.75rem;
+      height: 0.75rem;
+      font-size: 0.75rem;
+      text-align: center;
+      line-height: 0.75rem;
+      color: #282c34;
+      border: none;
+      background: transparent;
+      transition: transform 0.3s ease;
+    }
+    ul.tree li.collapsible.expanded::before {
+      content: "\25BC"; /* down-pointing triangle */
+      transform: rotate(0deg);
+    }
+    ul.tree li > ul {
+      display: none;
+    }
+    ul.tree li.expanded > ul {
+      display: block;
+    }
+    .skill-node {
+      display: inline-block;
+      padding: 0.25rem 0.5rem;
+      background-color: #61dafb;
+      color: #282c34;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      user-select: none;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+    th, td {
+      padding: 0.75rem;
+      border-bottom: 1px solid #ddd;
+      text-align: left;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #282c34;
+      color: #fff;
+      margin-top: 3rem;
+    }
+    .project-title {
+      font-weight: bold;
+      font-size: 1.2rem;
+      color: #007ACC;
+    }
+    .contact-list li {
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Ramya</h1>
+  <p>2nd Sem BCA Student & Aspiring UI/UX Designer</p>
+</header>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>Hello! I am Ramya. R, a dedicated and passionate 2nd Semester BCA student focusing on UI/UX design. I blend my technical skills and creativity to craft user-friendly, aesthetic, and efficient interfaces that provide excellent user experiences. With a consistent drive for learning and improvement, I aim to contribute to the world of design with innovative solutions and grow my expertise through real-world projects.</p>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <ul class="tree">
+    <li class="collapsible expanded"><span class="skill-node">Programming Languages</span>
+      <ul>
+        <li><span class="skill-node">C</span></li>
+        <li><span class="skill-node">C++</span></li>
+        <li><span class="skill-node">Java</span></li>
+        <li><span class="skill-node">Python</span></li>
+      </ul>
+    </li>
+    <li class="collapsible expanded"><span class="skill-node">UI/UX Skills</span>
+      <ul>
+        <li><span class="skill-node">Wireframing &amp; Prototyping</span></li>
+        <li><span class="skill-node">User Research</span></li>
+        <li><span class="skill-node">Interaction Design</span></li>
+        <li><span class="skill-node">Visual Design Principles</span></li>
+        <li><span class="skill-node">User Testing</span></li>
+      </ul>
+    </li>
+    <li class="collapsible expanded"><span class="skill-node">Design Tools</span>
+      <ul>
+        <li><span class="skill-node">Adobe XD</span></li>
+        <li><span class="skill-node">Figma</span></li>
+        <li><span class="skill-node">Sketch</span></li>
+      </ul>
+    </li>
+    <li class="collapsible expanded"><span class="skill-node">Web Technologies</span>
+      <ul>
+        <li><span class="skill-node">HTML5</span></li>
+        <li><span class="skill-node">CSS3 (basic knowledge)</span></li>
+      </ul>
+    </li>
+  </ul>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+
+  <article>
+    <p class="project-title">Project: E-commerce App UI Design</p>
+    <p>Designed a clean and user-friendly mobile UI for an e-commerce application focusing on easy navigation and aesthetic product displays. Created wireframes and interactive prototypes using Figma, emphasizing a minimalistic design approach.</p>
+  </article>
+
+  <article>
+    <p class="project-title">Project: College Event Website</p>
+    <p>Developed the user interface design for a college event website, focusing on clear call-to-actions, event schedules, and a responsive layout. Tools used include Adobe XD and user feedback sessions to iterate on the design.</p>
+  </article>
+
+  <article>
+    <p class="project-title">Project: Portfolio Website Concept</p>
+    <p>Conceptualized and created a portfolio website mockup to showcase personal work and skills, implementing user-centric navigation and visual hierarchy to ensure visitors could quickly find relevant information.</p>
+  </article>
+</section>
+
+<section id="education">
+  <h2>Education</h2>
+  <table>
+    <tr>
+      <th>Degree</th>
+      <th>Institution</th>
+      <th>Duration</th>
+      <th>Details</th>
+    </tr>
+    <tr>
+      <td>2nd Sem Bachelor of Computer Applications (BCA)</td>
+      <td>XYZ University</td>
+      <td>2023 - Present</td>
+      <td>Special focus on Web Technologies and UI/UX Design courses.</td>
+    </tr>
+    <tr>
+      <td>Higher Secondary Education</td>
+      <td>ABC College</td>
+      <td>2019 - 2021</td>
+      <td>Science Stream with Computer Applications as elective.</td>
+    </tr>
+  </table>
+</section>
+
+<section id="contact">
+  <h2>Contact Me</h2>
+  <ul class="contact-list">
+    <li>Email: <a href="mailto:rr0254227@gmail.com.r">rr0254227@gmail.com.r</a></li>
+    <li>Phone: 9380764254010</li>
+    <li>LinkedIn: <a href="https://linkedin.com/in/janedoe" target="_blank">linkedin.com/in/janedoe</a></li>
+    <li>GitHub: <a href="https://github.com/janedoe" target="_blank">github.com/janedoe</a></li>
+  </ul>
+</section>
+
+<footer>
+  <p>© 2024 Ramya. All Rights Reserved.</p>
+</footer>
+
+<script>
+  // Toggle expand/collapse on clicking nodes with children
+  document.querySelectorAll('ul.tree li.collapsible > span.skill-node').forEach(node => {
+    node.addEventListener('click', e => {
+      const li = e.target.parentElement;
+      li.classList.toggle('expanded');
+    });
+  });
+</script>
+
+</body>
+</html>
+
+        
